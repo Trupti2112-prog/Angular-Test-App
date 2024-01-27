@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card-container">
+    <div class="card" *ngFor="let user of users">
+      <div class="card-body">
+        <div class="card-left">
+          <div class="card-title">Name :</div>
+          <div class="card-title">Email :</div>
+          <div class="card-title">Address : </div>
+        </div>
+        <div class="card-right">
+          <div class="card-text">{{ user.firstName }} {{ user.lastName }}</div>
+          <div class="card-text">{{ user.email }}</div>
+          <div class="card-text">{{ user.address }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

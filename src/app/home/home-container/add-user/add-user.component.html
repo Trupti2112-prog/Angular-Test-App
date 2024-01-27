@@ -1,0 +1,50 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name<span class="required">*</span></label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="Enter first name">
+      <div class="errorMsg"
+        *ngIf="userForm.get('firstName')?.hasError('required') && userForm.get('firstName')?.touched">
+        First Name is required.
+      </div>
+      <div class="errorMsg"
+        *ngIf="userForm.get('firstName')?.hasError('maxlength') && userForm.get('firstName')?.touched">
+        Maximum length is 50 characters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name<span class="required">*</span></label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter last name">
+      <div class="errorMsg" *ngIf="userForm.get('lastName')?.hasError('required') && userForm.get('lastName')?.touched">
+        Last Name is required.
+      </div>
+      <div class="errorMsg"
+        *ngIf="userForm.get('lastName')?.hasError('maxlength') && userForm.get('lastName')?.touched">
+        Maximum length is 50 characters.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Id<span class="required">*</span></label>
+      <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email">
+      <div class="errorMsg" *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+        Email is required.
+      </div>
+      <div class="errorMsg" *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">
+        Please enter a valid email address.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address<span class="required">*</span></label>
+      <textarea class="form-control" id="address" formControlName="address" rows="3"
+        placeholder="Enter address"></textarea>
+      <div class="errorMsg" *ngIf="userForm.get('address')?.hasError('required') && userForm.get('address')?.touched">
+        Address is required.
+      </div>
+      <div class="errorMsg" *ngIf="userForm.get('address')?.hasError('maxlength') && userForm.get('address')?.touched">
+        Maximum length is 150 characters.
+      </div>
+    </div>
+    <button type="submit" class="btn" [disabled]="userForm.invalid">Add User</button>
+  </form>
+  <div id="snackbar">User added successfully...</div>
+</div>

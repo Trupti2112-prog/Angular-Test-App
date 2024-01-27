@@ -1,0 +1,32 @@
+.button {
+    box-shadow: inset 0 1px 0 0 var(--w-100-snow);
+    background: var(--w-100-snow) linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    border-radius: 6px;
+    border: 1px solid var(--r--100-coral);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--g-600-grey);
+    font-family: Arial, sans-serif;
+    font-size: var(--font-size-14);
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 ;
+    outline: 0;
+}
+.navbar{
+    padding: 0px;
+}
+#navbarNav{
+    background-color: var(--r-500-steel-blue);    
+}
+.nav-link {
+    color: var(--w-100-snow) !important;
+ }
+ 
+.navbar-nav .nav-item.active a {
+    color: var(--r-500-steel-blue);  
+    font-weight: bold;
+     text-decoration: underline;
+
+  }

@@ -1,0 +1,22 @@
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+
+	.button-col {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 0 15px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.custom-btn {
+		background-color: var(--r-500-steel-blue);
+		color: var(--w-100-snow);
+		width: 150px;
+		height: 50px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+}
