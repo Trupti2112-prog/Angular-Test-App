@@ -30,7 +30,7 @@ export class AddUserComponent {
       x.className = AppConstants.SHOW;
       setTimeout(() => {
         x.className = x.className.replace(AppConstants.SHOW, '');
-      }, 10000);
+      }, 3000);
       this.userForm.reset();
     } else {
       this.markFormGroupTouched(this.userForm);
